@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\glens\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\glens\\.nuget\\packages"
+    ]
+  }
+}

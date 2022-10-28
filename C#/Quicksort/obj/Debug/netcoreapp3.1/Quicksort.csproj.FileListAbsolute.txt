@@ -1,0 +1,14 @@
+C:\src\QuickSort\C#\Quicksort\bin\Debug\netcoreapp3.1\Quicksort.exe
+C:\src\QuickSort\C#\Quicksort\bin\Debug\netcoreapp3.1\Quicksort.deps.json
+C:\src\QuickSort\C#\Quicksort\bin\Debug\netcoreapp3.1\Quicksort.runtimeconfig.json
+C:\src\QuickSort\C#\Quicksort\bin\Debug\netcoreapp3.1\Quicksort.runtimeconfig.dev.json
+C:\src\QuickSort\C#\Quicksort\bin\Debug\netcoreapp3.1\Quicksort.dll
+C:\src\QuickSort\C#\Quicksort\bin\Debug\netcoreapp3.1\Quicksort.pdb
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.csproj.AssemblyReference.cache
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.AssemblyInfoInputs.cache
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.AssemblyInfo.cs
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.csproj.CoreCompileInputs.cache
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.dll
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.pdb
+C:\src\QuickSort\C#\Quicksort\obj\Debug\netcoreapp3.1\Quicksort.genruntimeconfig.cache
