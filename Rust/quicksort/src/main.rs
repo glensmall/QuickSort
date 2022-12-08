@@ -2,56 +2,51 @@
 fn main() 
 {
 
-	println!("QuickSort Implementation in Go - Glen Small: October 2022");
+	println!("quick_sort Implementation in Rust - Glen Small: October 2022");
 
-	let mut start = 0;
-	let mut end = 9;
-	let mut unsortedArray: [i32; 10] = [44, 27, 3, 75, 88, 11, 9, 12, 36, 60];
+	let mut start: usize = 0;
+	let mut end: usize = 9;
+	let mut unsorted_array: [i32; 10] = [44, 27, 3, 75, 88, 11, 9, 12, 36, 60];
 
 	println!();
-	println!("Unsorted array is:");
-	//println!(unsortedData);
+	println!("UnSorted array is: {:?}", unsorted_array);
 
-	quickSort(&mut unsortedArray, &mut start, &mut end);
+	quick_sort(&mut unsorted_array, &mut start, &mut end);
 
-	println!("Sorted array is:");
-	//println!(unsortedData);
+	println!("Sorted array is: {:?}", unsorted_array);
 
 }
 
 // resursive fntion to do the sort
-fn quickSort(_data: &mut [i32; 10], _start: &mut i32, _end: &mut i32) 
+fn quick_sort(_data: &mut [i32; 10], _start: &mut usize, _end: &mut usize) 
 {
 
 	// process if start is less than end
 	if *_start < *_end 
 	{
 
-		let mut pivot = partition(_data, _start, _end);
+		let pivot: usize = partition(_data, _start, _end);
 
 		// before the pivot
-		pivot-1;
-		quickSort(_data, _start, pivot);
+		quick_sort(_data, _start, &mut (pivot -1));
 
 		// after the pivot
-		pivot+1;
-		quickSort(_data, pivot, _end);
+		quick_sort(_data, &mut (pivot +1), _end);
 	}
 
 }
 
 // fntion to partition the array
-fn partition(_data: &mut [i32; 10], _start: &mut i32, _end: &mut i32) -> i32
+fn partition(_data: &mut [i32; 10], _start: &mut usize, _end: &mut usize) -> usize
 {
-
 	// position the pivot point
-	let mut pivot = _data[_end];
+	let pivot: i32 = _data[*_end];
 
 	// set the index of the smaller position
 	let mut index = *_start - 1;
 
 	// iterate between start and end
-	for _loop in _start.._end
+	for _loop in *_start..*_end
 	{
 		// swap if pivot is greater than data
 		if _data[_loop] < pivot 
@@ -59,14 +54,14 @@ fn partition(_data: &mut [i32; 10], _start: &mut i32, _end: &mut i32) -> i32
 			index = index+1;
 			let mut _temp = _data[index];
 			_data[index] = _data[_loop];
-			_data[_loop] = temp;
+			_data[_loop] = _temp;
 		}
 	}
 
 	// Swap the index with the end
-	let mut temp int = _data[index+1];
-	_data[index+1] = _data[_end];
-	_data[_end] = temp;
+	let temp: i32 = _data[index+1];
+	_data[index+1] = _data[*_end];
+	_data[*_end] = temp;
 
 	// return value
 	index + 1
