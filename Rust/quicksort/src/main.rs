@@ -1,6 +1,6 @@
-use std::mem;
 
-fn main() {
+fn main() 
+{
 
 	println!("QuickSort Implementation in Go - Glen Small: October 2022");
 
@@ -10,59 +10,66 @@ fn main() {
 
 	println!();
 	println!("Unsorted array is:");
-	println!(unsortedData);
+	//println!(unsortedData);
 
-	quickSort(&unsortedData, &start, &end);
+	quickSort(&mut unsortedArray, &mut start, &mut end);
 
 	println!("Sorted array is:");
-	println!(unsortedData);
+	//println!(unsortedData);
 
 }
 
 // resursive fntion to do the sort
-fn quickSort(_data, _start, _end) {
+fn quickSort(_data: &mut [i32; 10], _start: &mut i32, _end: &mut i32) 
+{
 
 	// process if start is less than end
-	if _start < _end {
+	if *_start < *_end 
+	{
 
-		let mut pivot = partition(&_data, &_start, &_end);
+		let mut pivot = partition(_data, _start, _end);
 
 		// before the pivot
-		quickSort(&_data, &_start, &pivot-1);
+		pivot-1;
+		quickSort(_data, _start, pivot);
 
 		// after the pivot
-		quickSort(&_data, &pivot+1, &_end);
+		pivot+1;
+		quickSort(_data, pivot, _end);
 	}
 
 }
 
 // fntion to partition the array
-fn partition(_data *[10]int, _start int, _end int) -> int {
+fn partition(_data: &mut [i32; 10], _start: &mut i32, _end: &mut i32) -> i32
+{
 
 	// position the pivot point
-	let pivot int = (*_data);[_end]
+	let mut pivot = _data[_end];
 
 	// set the index of the smaller position
-	let index = _start - 1
+	let mut index = *_start - 1;
 
 	// iterate between start and end
-	for loop := _start; loop < _end; loop++ {
-
+	for _loop in _start.._end
+	{
 		// swap if pivot is greater than data
-		if (*_data);[loop] < pivot {
-			index++
-			let temp int = (*_data);[index]
-			(*_data);[index] = (*_data);[loop]
-			(*_data);[loop] = temp
+		if _data[_loop] < pivot 
+		{
+			index = index+1;
+			let mut _temp = _data[index];
+			_data[index] = _data[_loop];
+			_data[_loop] = temp;
 		}
 	}
 
 	// Swap the index with the end
-	let temp int = (*_data);[index+1]
-	(*_data);[index+1] = (*_data);[_end]
-	(*_data);[_end] = temp
+	let mut temp int = _data[index+1];
+	_data[index+1] = _data[_end];
+	_data[_end] = temp;
 
-	return (index + 1);
+	// return value
+	index + 1
 }
 
 
