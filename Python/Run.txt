@@ -1,0 +1,107 @@
+QuickSort Implementation in Python - Glen Small: October 2022
+Unsorted array is: [44, 27, 3, 75, 88, 11, 9, 12, 36, 60]
+QUICKSORT - Arrany looks like [44, 27, 3, 75, 88, 11, 9, 12, 36, 60]
+QUCKSORT Start = 0  End = 9
+Start OF PARTITION - Arrany looks like [44, 27, 3, 75, 88, 11, 9, 12, 36, 60]
+PARTITION - Start = 0 End = 9
+Pivot = 60
+Index = -1
+IN LOOP  Loop = 0  Index = -1
+Swapping in Loop.  loop value = 44  index value = 44
+index now 0
+IN LOOP  Loop = 1  Index = 0
+Swapping in Loop.  loop value = 27  index value = 27
+index now 1
+IN LOOP  Loop = 2  Index = 1
+Swapping in Loop.  loop value = 3  index value = 3
+index now 2
+IN LOOP  Loop = 3  Index = 2
+IN LOOP  Loop = 4  Index = 2
+IN LOOP  Loop = 5  Index = 2
+Swapping in Loop.  loop value = 11  index value = 75
+index now 3
+IN LOOP  Loop = 6  Index = 3
+Swapping in Loop.  loop value = 9  index value = 88
+index now 4
+IN LOOP  Loop = 7  Index = 4
+Swapping in Loop.  loop value = 12  index value = 75
+index now 5
+IN LOOP  Loop = 8  Index = 5
+Swapping in Loop.  loop value = 36  index value = 88
+index now 6
+OURSIDE Loop  index = 6
+Swapping index+1 with end - Index+1 value = 75  end value = 60 
+END OF PARTITION - Arrany looks like [44, 27, 3, 11, 9, 12, 36, 60, 88, 75]
+Partition Returned 7 as pivot
+QUICKSORT - Arrany looks like [44, 27, 3, 11, 9, 12, 36, 60, 88, 75]
+QUCKSORT Start = 0  End = 6
+Start OF PARTITION - Arrany looks like [44, 27, 3, 11, 9, 12, 36, 60, 88, 75]
+PARTITION - Start = 0 End = 6
+Pivot = 36
+Index = -1
+IN LOOP  Loop = 0  Index = -1
+IN LOOP  Loop = 1  Index = -1
+Swapping in Loop.  loop value = 27  index value = 44
+index now 0
+IN LOOP  Loop = 2  Index = 0
+Swapping in Loop.  loop value = 3  index value = 44
+index now 1
+IN LOOP  Loop = 3  Index = 1
+Swapping in Loop.  loop value = 11  index value = 44
+index now 2
+IN LOOP  Loop = 4  Index = 2
+Swapping in Loop.  loop value = 9  index value = 44
+index now 3
+IN LOOP  Loop = 5  Index = 3
+Swapping in Loop.  loop value = 12  index value = 44
+index now 4
+OURSIDE Loop  index = 4
+Swapping index+1 with end - Index+1 value = 44  end value = 36 
+END OF PARTITION - Arrany looks like [27, 3, 11, 9, 12, 36, 44, 60, 88, 75]
+Partition Returned 5 as pivot
+QUICKSORT - Arrany looks like [27, 3, 11, 9, 12, 36, 44, 60, 88, 75]
+QUCKSORT Start = 0  End = 4
+Start OF PARTITION - Arrany looks like [27, 3, 11, 9, 12, 36, 44, 60, 88, 75]
+PARTITION - Start = 0 End = 4
+Pivot = 12
+Index = -1
+IN LOOP  Loop = 0  Index = -1
+IN LOOP  Loop = 1  Index = -1
+Swapping in Loop.  loop value = 3  index value = 27
+index now 0
+IN LOOP  Loop = 2  Index = 0
+Swapping in Loop.  loop value = 11  index value = 27
+index now 1
+IN LOOP  Loop = 3  Index = 1
+Swapping in Loop.  loop value = 9  index value = 27
+index now 2
+OURSIDE Loop  index = 2
+Swapping index+1 with end - Index+1 value = 27  end value = 12 
+END OF PARTITION - Arrany looks like [3, 11, 9, 12, 27, 36, 44, 60, 88, 75]
+Partition Returned 3 as pivot
+QUICKSORT - Arrany looks like [3, 11, 9, 12, 27, 36, 44, 60, 88, 75]
+QUCKSORT Start = 0  End = 2
+Start OF PARTITION - Arrany looks like [3, 11, 9, 12, 27, 36, 44, 60, 88, 75]
+PARTITION - Start = 0 End = 2
+Pivot = 9
+Index = -1
+IN LOOP  Loop = 0  Index = -1
+Swapping in Loop.  loop value = 3  index value = 3
+index now 0
+IN LOOP  Loop = 1  Index = 0
+OURSIDE Loop  index = 0
+Swapping index+1 with end - Index+1 value = 11  end value = 9 
+END OF PARTITION - Arrany looks like [3, 9, 11, 12, 27, 36, 44, 60, 88, 75]
+Partition Returned 1 as pivot
+QUICKSORT - Arrany looks like [3, 9, 11, 12, 27, 36, 44, 60, 88, 75]
+QUCKSORT Start = 8  End = 9
+Start OF PARTITION - Arrany looks like [3, 9, 11, 12, 27, 36, 44, 60, 88, 75]
+PARTITION - Start = 8 End = 9
+Pivot = 75
+Index = 7
+IN LOOP  Loop = 8  Index = 7
+OURSIDE Loop  index = 7
+Swapping index+1 with end - Index+1 value = 88  end value = 75 
+END OF PARTITION - Arrany looks like [3, 9, 11, 12, 27, 36, 44, 60, 75, 88]
+Partition Returned 8 as pivot
+Sorted array is: [3, 9, 11, 12, 27, 36, 44, 60, 75, 88]

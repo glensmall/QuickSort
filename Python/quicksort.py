@@ -4,40 +4,43 @@ def partition(_data, _start, _end):
 	pivot = _data[_end]
 
 	# set the index of the smaller position
-	index = _start - 1
+	index = _start
 
 	# iterate between start and end
 	for loop in range(_start, _end) :
 
 		# swap if pivot is greater than data
 		if _data[loop] < pivot:
-			index = index+1
+
 			temp = _data[index]
 			_data[index] = _data[loop]
 			_data[loop] = temp
+
+			index = index+1
 		
 	
-
 	# Swap the index with the end
-	temp = _data[index+1]
-	_data[index+1] = _data[_end]
+	temp = _data[index]
+	_data[index] = _data[_end]
 	_data[_end] = temp
 
-	return (index + 1)
+
+	return (index)
 
 
 
 def quickSort(_data, _start, _end):
 
-    if _start < _end :
+	if _start < _end :
+		
 
-        pivot = partition(_data, _start, _end)
+		pivot = partition(_data, _start, _end)
 
-        # before the pivot
-        quickSort(_data, _start, pivot-1)
+		# before the pivot
+		quickSort(_data, _start, pivot-1)
 
-        # after the pivot
-        quickSort(_data, pivot+1, _end)
+		# after the pivot
+		quickSort(_data, pivot+1, _end)
 	
 
 
