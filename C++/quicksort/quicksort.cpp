@@ -1,4 +1,8 @@
-#include "quicksort.h"
+#include <vector>
+#include <iostream>
+
+void quickSort(std::vector<int>* _data, int _start, int _end);
+int partition(std::vector<int>* _data, int _start, int _end);
 
 int main()
 {
@@ -7,7 +11,8 @@ int main()
     // a few variables to use
     int Start = 0;
     int End = 9;
-    std::array<int, 10> unsortedArray = { 44, 27, 3, 75, 88, 11, 9, 12, 36, 60 };
+    //std::array<int, 10> unsortedArray = { 44, 27, 3, 75, 88, 11, 9, 12, 36, 60 };
+    std::vector<int> unsortedArray = { 44, 27, 3, 75, 88, 11, 9, 12, 36, 60 };
 
     // let the user know whats going on
     std::cout << std::endl << "The Unsorted data is: {";
@@ -35,7 +40,7 @@ int main()
     return(0);   
 }
 
-void quickSort(std::array<int, 10>* _data, int _start, int _end)
+void quickSort(std::vector<int>* _data, int _start, int _end)
 {
     // process if start is less than end
     if (_start < _end)
@@ -50,7 +55,7 @@ void quickSort(std::array<int, 10>* _data, int _start, int _end)
     }
 }
 
-int partition(std::array<int, 10>* _data, int _start, int _end)
+int partition(std::vector<int>* _data, int _start, int _end)
 {
 
     // position the pivot point
